@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jayway.awaitility:awaitility:${awaitility.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jayway/awaitility/awaitility/${awaitility.version}/awaitility-${awaitility.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jayway/awaitility/awaitility/${awaitility.version}/awaitility-${awaitility.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jayway/awaitility/awaitility/${awaitility.version}/awaitility-${awaitility.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

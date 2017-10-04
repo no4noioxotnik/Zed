@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.seleniumhq.selenium:selenium-java:${selenium.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-java/${selenium.version}/selenium-java-${selenium.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-java/${selenium.version}/selenium-java-${selenium.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-java/${selenium.version}/selenium-java-${selenium.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
