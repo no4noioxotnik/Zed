@@ -1,7 +1,7 @@
 package meat;
 
 import java.io.File;
-import java.nio.file.Files;
+
 
 public class heart {
 
@@ -21,11 +21,11 @@ public class heart {
 
     static void func(String path, String find) {
         File f = new File(path);
-        String[] list = f.list();     //список файлов в текущей папке
-        for (String file : list) {      //проверка на совпадение
+        String[] list = f.list();
+        for (String file : list) {
                 if (find.equals(file)) {
                 flag=true;
-                System.out.println(path + "\\" + file + " !!!!!!!!!!!!!!!!!!");  //если найден, то выход
+                System.out.println(path + "\\" + file + " !!!!!!!!!!!!!!!!!!");
                 return;
             }
             if (!path.endsWith("\\")) {
@@ -33,10 +33,10 @@ public class heart {
             }
             File tempfile = new File(path + file);
             System.out.println(path + file);
-            if (!file.equals(".") && !file.equals("..")) {        //!!!
-                if (tempfile.isDirectory()) {      //иначе проверяем, если это папка
+            if (!file.equals(".") && !file.equals("..")) {
+                if (tempfile.isDirectory()) {
                     //path += file;
-                    func(path + file, find);               //то рекурсивный вызов этой функции
+                    func(path + file, find);
                     if(flag) return;
                 }
             }
