@@ -6,7 +6,7 @@ public class Main {
         File dir = new File("C://");
         FilenameFilter filter = new FilenameFilter() {
             public boolean accept (File dir, String name) {
-                return name.startsWith("Cookies");}};
+                return name.startsWith("S");}};
         String[] children = dir.list(filter);
         if (children == null) {
             System.out.println("Wrong directory");
