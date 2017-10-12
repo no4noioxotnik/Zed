@@ -23,11 +23,16 @@ public static void main(String[] args){
         System.out.println("Файл доступен для записи");
     else
         System.out.println("Файл не доступен для записи");
+
     // создадим новый файл
+    File dir = new File("C://SomeDir");
     File newFile = new File("C://SomeDir//MyFile");
     try
     {
+        boolean create = dir.mkdir();
         boolean created = newFile.createNewFile();
+        if (create)
+            System.out.println("Папка создана");
         if(created)
             System.out.println("Файл создан");
     }
