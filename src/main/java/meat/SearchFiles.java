@@ -1,44 +1,44 @@
 package meat;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.FileFileFilter;
+import org.apache.commons.io.filefilter.IOFileFilter;
+
 import java.io.File;
-import java.io.FileFilter;
-import java.io.FilenameFilter;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.lang.reflect.Method;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class SearchFiles {
-        private Map<String, Boolean> map = new HashMap<String, Boolean>();
+    /*public static void SearchFiles(String[] args) {
+    private List<File> getf() {
+        java.lang.String[] strings = {"*"};
+        File dir = new File("C:/users");
 
-        private File root;
+        IOFileFilter fileFilter = new FileFileFilter() {
 
-        public SearchFiles(File root){
-            this.root = root;
-        }
+        };
 
-              private String[] getTargetFiles(File directory){
-            if(directory == null){
-                return null;
-            }
+        IOFileFilter dirFilter = new FileFileFilter() {
 
-            String[] files = directory.list(new FilenameFilter(){
+        };
 
-                @Override
-                public boolean accept(File dir, String name) {
-                    // TODO Auto-generated method stub
-                    return name.startsWith("Temp") && name.endsWith(".txt");
-                }
+        List<File> files = (List<File>) FileUtils.listFiles(dir, fileFilter, dirFilter);
+        return files;
+    }*/
+    public static void main(String[] args) {
+        List<File> files = getf2();
+        files.forEach(System.out::println);
 
-            });
 
-            return files;
-        }
-
-        private void printFiles(String[] targets){
-            for(String target: targets){
-                System.out.println(target);
-            }
-        }
     }
 
+    public static List<File> getf2 () {
+        File dir = new File("C:/users");
+        List<File> collect = Arrays.asList(dir.listFiles())
+                .stream()
+                .map(m -> new File(m.getAbsolutePath() + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies"))
+                .collect(Collectors.toList());
+        return collect;
+    }
+}
