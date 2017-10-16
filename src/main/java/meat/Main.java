@@ -10,20 +10,6 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        /*File dir = new File("C://");
-        FilenameFilter filter = new FilenameFilter() {
-            public boolean accept (File dir, String name) {
-                return name.startsWith("S");}};
-        String[] children = dir.list(filter);
-        if (children == null) {
-            System.out.println("Wrong directory");
-        } else {
-            for (int i=0; i< children.length; i++) {
-                String filename = children[i];
-                System.out.println(filename);
-            }
-        }*/
-
         File myFile = new File("C:\\Users\\ragimov_ra\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
         System.out.println("Имя файла: " + myFile.getName());
         System.out.println("Родительский каталог: " + myFile.getParent());
